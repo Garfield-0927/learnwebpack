@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import  _ from 'lodash'
 import './style.css';
 
@@ -9,6 +10,12 @@ function component() {
   
     return element;
   }
-  console.log('webpack');
-  
-  document.body.appendChild(component());
+console.log('webpack');
+
+document.body.appendChild(component());
+const app = new Vue({
+  el:'#app',
+  data:{
+    message:'hello webpack!!!!!'
+  }
+})
